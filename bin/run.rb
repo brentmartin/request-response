@@ -73,13 +73,14 @@ loop do
         puts hash.values.join(" ")
 
       end
-    # elsif USERS[id] >= USERS.length+1
-    #
+    elsif @params[:id].to_i > USERS.length
+      puts "HTTP/1.1 404"
+      puts "name not found"
     elsif @params.include?(:id)
       id = @params[:id].to_i-1
       puts USERS[id].values.join(" ")
-
-
+    else
+      # puts "HTTP/"
     end
 
     # YOUR CODE GOES ABOVE HERE  ^
