@@ -69,26 +69,18 @@ loop do
               {:first_name => "John",    :last_name => "McEnroe", :age => "49"},
     ]
     if @params[:id] == nil
-      # puts USERS.values.join(" ")
       USERS.each do |hash|
         puts hash.values.join(" ")
+
       end
+    # elsif USERS[id] >= USERS.length+1
+    #
     elsif @params.include?(:id)
       id = @params[:id].to_i-1
       puts USERS[id].values.join(" ")
 
+
     end
-
-    # puts @request.inspect
-    #
-    # puts @params
-    #
-
-    # get_array_position(params[id:])
-    #
-    # def get_array_position(params[id:])
-    #   USERS[params[id:]]
-    # end
 
     # YOUR CODE GOES ABOVE HERE  ^
   end
