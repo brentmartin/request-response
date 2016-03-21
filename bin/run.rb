@@ -59,8 +59,6 @@ loop do
     #
     # YOUR CODE GOES BELOW HERE
 
-    puts @request.inspect
-
     USERS = [ {:first_name => "Andy",    :last_name => "Roddick", :age => "33"},
               {:first_name => "Pete",    :last_name => "Sampras", :age => "44"},
               {:first_name => "Andre",   :last_name => "Agassi",  :age => "45"},
@@ -70,15 +68,27 @@ loop do
               {:first_name => "Patrick", :last_name => "McEnroe", :age => "57"},
               {:first_name => "John",    :last_name => "McEnroe", :age => "49"},
     ]
+    if @params[:id] == nil
+      # puts USERS.values.join(" ")
+      USERS.each do |hash|
+        puts hash.values.join(" ")
+      end
+    elsif @params.include?(:id)
+      id = @params[:id].to_i-1
+      puts USERS[id].values.join(" ")
 
-    puts "Put in a request thing"
-    print "  >"
-    position = gets.chomp
-    get_array_position(position)
-
-    def get_array_position(position)
-      USERS[position]
     end
+
+    # puts @request.inspect
+    #
+    # puts @params
+    #
+
+    # get_array_position(params[id:])
+    #
+    # def get_array_position(params[id:])
+    #   USERS[params[id:]]
+    # end
 
     # YOUR CODE GOES ABOVE HERE  ^
   end
