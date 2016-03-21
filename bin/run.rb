@@ -58,6 +58,16 @@ loop do
     # return an appropriate response
 
     # YOUR CODE GOES BELOW HERE
+    users = [ {:first_name => "Andy", :last_name => "Roddick", :age => "33"},
+              {:first_name => "Pete", :last_name => "Sampras", :age => "44"},
+              {:first_name => "Andre", :last_name => "Agassi", :age => "45"},
+              {:first_name => "James", :last_name => "Blake", :age => "36"},
+              {:first_name => "Todd", :last_name => "Martin", :age => "45"},
+              {:first_name => "Michael", :last_name => "Chang", :age => "44"},
+              {:first_name => "Patrick", :last_name => "McEnroe", :age => "57"},
+              {:first_name => "John", :last_name => "McEnroe", :age => "49"}, 
+    ]
+
 
     # YOUR CODE GOES ABOVE HERE  ^
   end
