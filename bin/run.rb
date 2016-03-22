@@ -68,10 +68,10 @@ loop do
               {:first_name => "Patrick", :last_name => "McEnroe", :age => "57"},
               {:first_name => "John",    :last_name => "McEnroe", :age => "49"},
     ]
+
     if @params[:id] == nil
       USERS.each do |hash|
         puts hash.values.join(" ")
-
       end
     elsif @params[:id].to_i > USERS.length
       puts "HTTP/1.1 404"
@@ -80,7 +80,7 @@ loop do
       id = @params[:id].to_i-1
       puts USERS[id].values.join(" ")
     else
-      # puts "HTTP/"
+      puts "HTTP/1.1 404"
     end
 
     # YOUR CODE GOES ABOVE HERE  ^
